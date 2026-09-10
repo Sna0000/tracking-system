@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live Tracking — SCTTS</title>
+<meta name="description" content="A simulated live map of Route 07 showing the bus position, your pickup point and the campus destination." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <nav class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-bus-simple"></i></span><span><span class="brand-name">SCTTS</span><span class="brand-sub">Smart College Transport</span></span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="live-tracking.html">Live Tracking</a><a href="bus-schedule.html">Bus Schedule</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i data-theme-icon class="fa-solid fa-moon"></i></button>
+      <a class="btn btn-primary" href="login.html">Login</a>
+      <button class="icon-btn burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a>
+    <a href="live-tracking.html"><i class="fa-solid fa-location-crosshairs"></i>Live Tracking</a>
+    <a href="bus-schedule.html"><i class="fa-solid fa-clock"></i>Bus Schedule</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
+    <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+  </div>
+</header>
+
+<main>
+  <section id="live-preview" class="hero">
+    <span class="blob blob-2"></span>
+    <div class="container">
+      <div class="section-head">
+        <span class="pill"><i class="fa-solid fa-location-crosshairs"></i> Live tracking</span>
+        <h1>Route 07 in <span class="gradient-text">motion</span></h1>
+        <p class="muted">This demo simulates the GPS feed. Real vehicle data connects in a later phase.</p>
+      </div>
+
+      <div class="glass map-wrap">
+        <div class="map-cols">
+          <div class="map">
+            <div class="map-badge"><span class="live"></span>Live · Route 07</div>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polyline points="12,74 26,58 43,62 58,40 74,34 87,18" fill="none" stroke="var(--brand)" stroke-opacity="0.35" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+              <polyline class="dash" points="12,74 26,58 43,62 58,40 74,34 87,18" fill="none" stroke="var(--brand-2)" stroke-width="1.6" stroke-dasharray="6 8" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            </svg>
+            <div class="marker" style="left:12%;top:74%"><span class="lbl">Your pickup</span><span class="dot"><i class="fa-solid fa-person-walking"></i></span></div>
+            <div class="marker accent" style="left:87%;top:18%"><span class="lbl">College campus</span><span class="dot"><i class="fa-solid fa-building-columns"></i></span></div>
+            <div class="bus-dot" id="bus-dot" style="left:12%;top:74%"><span class="ring"></span><span class="core"><i class="fa-solid fa-bus-simple"></i></span></div>
+          </div>
+          <div class="side">
+            <div class="glass eta">
+              <p class="muted" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0">Arriving at your stop</p>
+              <p class="val gradient-text" id="eta-value" style="margin:4px 0 0">14 min</p>
+              <p class="muted" style="font-size:12px;margin:0">Updated a moment ago</p>
+            </div>
+            <div class="glass row"><span class="ico"><i class="fa-solid fa-id-card"></i></span><span><span class="k">Driver</span><span class="v">R. Menon</span></span></div>
+            <div class="glass row"><span class="ico"><i class="fa-solid fa-van-shuttle"></i></span><span><span class="k">Vehicle</span><span class="v">KL-07 AB 4412</span></span></div>
+            <div class="glass row"><span class="ico"><i class="fa-solid fa-users"></i></span><span><span class="k">Occupancy</span><span class="v">31 / 48 seats</span></span></div>
+            <div class="glass row"><span class="ico"><i class="fa-solid fa-flag-checkered"></i></span><span><span class="k">Next stop</span><span class="v">Tech Park Gate</span></span></div>
+            <button class="btn btn-ghost btn-block" data-toast="Alerts are coming soon" data-toast-desc="You'll be able to subscribe to your own stop.">Notify me at my stop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-3">
+      <div class="glass feature reveal"><div class="ico"><i class="fa-solid fa-clock-rotate-left"></i></div><h3>Trip history</h3><p>Every completed trip is stored so delays can be reviewed later.</p></div>
+      <div class="glass feature reveal"><div class="ico"><i class="fa-solid fa-triangle-exclamation"></i></div><h3>Delay alerts</h3><p>Drivers can flag a breakdown or traffic hold and everyone sees it at once.</p></div>
+      <div class="glass feature reveal"><div class="ico"><i class="fa-solid fa-map-location-dot"></i></div><h3>All routes view</h3><p>The transport office can watch the entire fleet on a single screen.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-bus-simple"></i></span><span><span class="brand-name">SCTTS</span><span class="brand-sub">Smart College Transport</span></span></a>
+        <p class="muted" style="font-size:14px;max-width:320px">Live campus bus tracking for students, drivers and the transport office.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="live-tracking.html">Live Tracking</a></li><li><a href="bus-schedule.html">Bus Schedule</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><i class="fa-solid fa-envelope"></i> transport@college.edu</li><li><i class="fa-solid fa-phone"></i> +91 90000 00000</li><li><i class="fa-solid fa-location-dot"></i> Transport Cell, Main Campus</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> SCTTS. All rights reserved.</span><span>Demo build — sample data only.</span></div>
+  </div>
+</footer>
+
+<div id="toasts"></div>
+<script src="../js/main.js"></script>
+<script src="../js/tracking.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

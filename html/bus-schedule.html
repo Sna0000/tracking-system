@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bus Schedule — SCTTS</title>
+<meta name="description" content="Sample morning and evening timings for every campus route, with a quick search by route or stop." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <nav class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-bus-simple"></i></span><span><span class="brand-name">SCTTS</span><span class="brand-sub">Smart College Transport</span></span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="live-tracking.html">Live Tracking</a><a href="bus-schedule.html">Bus Schedule</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i data-theme-icon class="fa-solid fa-moon"></i></button>
+      <a class="btn btn-primary" href="login.html">Login</a>
+      <button class="icon-btn burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a>
+    <a href="live-tracking.html"><i class="fa-solid fa-location-crosshairs"></i>Live Tracking</a>
+    <a href="bus-schedule.html"><i class="fa-solid fa-clock"></i>Bus Schedule</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
+    <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="blob blob-1"></span>
+    <div class="container">
+      <div class="section-head">
+        <span class="pill"><i class="fa-solid fa-clock"></i> Bus schedule</span>
+        <h1>Timings for every <span class="gradient-text">campus route</span></h1>
+        <p class="muted">Sample timetable for the demo. Search by route number, stop or driver.</p>
+      </div>
+
+      <div style="max-width:460px;margin:26px auto 0">
+        <input id="route-search" type="search" placeholder="Search route, stop or driver…" aria-label="Search schedule" />
+      </div>
+
+      <div class="glass table-wrap">
+        <table>
+          <thead>
+            <tr><th>Route</th><th>Main stops</th><th>Morning</th><th>Evening</th><th>Driver</th><th>Status</th></tr>
+          </thead>
+          <tbody id="schedule-body">
+            <tr><td><strong>07</strong></td><td>Tech Park Gate · Lake View · Market Square</td><td>07:10</td><td>16:45</td><td>R. Menon</td><td><span class="tag">On time</span></td></tr>
+            <tr><td><strong>02</strong></td><td>Central Bus Stand · Rose Garden</td><td>07:00</td><td>16:40</td><td>S. Iyer</td><td><span class="tag">On time</span></td></tr>
+            <tr><td><strong>11</strong></td><td>Riverside · Old Town · Clock Tower</td><td>06:50</td><td>17:00</td><td>A. Fernandes</td><td><span class="tag late">+8 min</span></td></tr>
+            <tr><td><strong>14</strong></td><td>Airport Road · Green Valley</td><td>07:20</td><td>16:50</td><td>K. Das</td><td><span class="tag">On time</span></td></tr>
+            <tr><td><strong>18</strong></td><td>Hill Colony · Stadium · Library Junction</td><td>07:05</td><td>17:10</td><td>M. Thomas</td><td><span class="tag">On time</span></td></tr>
+            <tr><td><strong>21</strong></td><td>North Gate · Silver Heights</td><td>06:45</td><td>16:35</td><td>P. Nair</td><td><span class="tag late">+5 min</span></td></tr>
+            <tr><td><strong>26</strong></td><td>Sea Face · Fishermen's Colony</td><td>07:15</td><td>17:05</td><td>V. Rao</td><td><span class="tag">On time</span></td></tr>
+          </tbody>
+        </table>
+        <p id="no-results" class="muted center" style="display:none;padding:18px">No routes match that search.</p>
+      </div>
+
+      <div class="cta-row" style="justify-content:center;margin-top:26px">
+        <button class="btn btn-primary" data-toast="Downloadable timetable is coming soon" data-toast-desc="A printable PDF will be added with the admin tools."><i class="fa-solid fa-download"></i> Download timetable</button>
+        <a class="btn btn-ghost" href="live-tracking.html">See buses live</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-bus-simple"></i></span><span><span class="brand-name">SCTTS</span><span class="brand-sub">Smart College Transport</span></span></a>
+        <p class="muted" style="font-size:14px;max-width:320px">Live campus bus tracking for students, drivers and the transport office.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="live-tracking.html">Live Tracking</a></li><li><a href="bus-schedule.html">Bus Schedule</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><i class="fa-solid fa-envelope"></i> transport@college.edu</li><li><i class="fa-solid fa-phone"></i> +91 90000 00000</li><li><i class="fa-solid fa-location-dot"></i> Transport Cell, Main Campus</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> SCTTS. All rights reserved.</span><span>Demo build — sample data only.</span></div>
+  </div>
+</footer>
+
+<div id="toasts"></div>
+<script src="../js/main.js"></script>
+<script src="../js/forms.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
