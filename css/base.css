@@ -1,7 +1,3 @@
-/* ===== PART 1 — base: theme variables, resets, helpers, buttons ===== */
-
-/* ================= SCTTS — global styles ================= */
-
 :root {
   --bg: #ffffff;
   --fg: #0b1220;
@@ -78,7 +74,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-/* ---------- buttons ---------- */
+
 .btn {
   display: inline-flex;
   align-items: center;
