@@ -1,8 +1,3 @@
-/* SCTTS - Shared Behaviour */
-
-
-/* ---------- Theme ---------- */
-
 function toggleTheme() {
 
     var html = document.documentElement;
@@ -38,7 +33,6 @@ function syncThemeIcon() {
 }
 
 
-/* ---------- Toast ---------- */
 
 function toast(message, description) {
 
