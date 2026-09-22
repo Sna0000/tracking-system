@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCTTS - Dashboard</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+  
+  <aside class="sidebar">
+    <div class="logo">🚌 <span>SCTTS</span></div>
+
+    <nav class="nav-links">
+      <a href="../html/dashboard.html" class="active">🏠 Home</a>
+      <a href="../html/live-tracking.html">📍 Live Tracking</a>
+      <a href="../html/notifications.html">🔔 Notifications</a>
+      <a href="../html/schedule.html">🕒 Bus Schedule</a>
+      <a href="../html/bus-details.html">🚍 Bus Details</a>
+    </nav>
+
+    <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+  </aside>
+
+  
+  <main class="main-content">
+
+    <header class="topbar">
+      <h1>Smart College Transport Tracking System</h1>
+      <span id="userName" class="user-name"></span>
+    </header>
+
+    <section class="welcome-banner">
+      <h2>Welcome to SCTTS 👋</h2>
+      <p>Track your college bus, stay updated and reach on time!</p>
+    </section>
+
+    <section class="cards-grid">
+
+      <div class="card">
+        <div class="card-icon">📍</div>
+        <h3>Live Tracking</h3>
+        <p>Track your college bus and view its current route.</p>
+        <a href="../html/live-tracking.html" class="card-btn">View Tracking</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔔</div>
+        <h3>Notifications</h3>
+        <p>Get important updates about your college bus.</p>
+        <a href="../html/notifications.html" class="card-btn">View Notifications</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🕒</div>
+        <h3>Bus Schedule</h3>
+        <p>Check pickup and college arrival timings.</p>
+        <a href="../html/schedule.html" class="card-btn">View Schedule</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚍</div>
+        <h3>Bus Details</h3>
+        <p>View bus, driver and route information.</p>
+        <a href="../html/bus-details.html" class="card-btn">View Details</a>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
