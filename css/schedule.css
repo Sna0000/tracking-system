@@ -1,0 +1,167 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: #14213d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.logo span {
+  margin-left: 6px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.nav-links a {
+  color: #c9d2e3;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  background: #1f2c4d;
+  color: white;
+}
+
+.nav-links a.active {
+  background: #2a5298;
+  color: white;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #3a4668;
+  color: #c9d2e3;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.logout-btn:hover {
+  background: #d9534f;
+  border-color: #d9534f;
+  color: white;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  color: #14213d;
+  margin-bottom: 25px;
+}
+
+/* SCHEDULE TABLE */
+.table-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 10px 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 12px;
+  font-size: 14px;
+}
+
+thead th {
+  background: #14213d;
+  color: white;
+  font-size: 13px;
+}
+
+thead th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+thead th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.on-time {
+  background: #e6f7ea;
+  color: #28a745;
+}
+
+.badge.delayed {
+  background: #fdf1e0;
+  color: #f0ad4e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .nav-links {
+    flex-direction: row;
+  }
+}

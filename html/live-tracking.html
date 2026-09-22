@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCTTS - Live Tracking</title>
+<link rel="stylesheet" href="../css/live-tracking.css">
+</head>
+<body>
+
+<div class="layout">
+
+ <aside class="sidebar">
+    <div class="logo">🚌 <span>SCTTS</span></div>
+    <nav class="nav-links">
+      <a href="../html/dashboard.html">🏠 Home</a>
+      <a href="../html/live-tracking.html">📍 Live Tracking</a>
+      <a href="../html/notifications.html" class="active">🔔 Notifications</a>
+      <a href="../html/schedule.html">🕒 Bus Schedule</a>
+      <a href="../html/bus-details.html">🚍 Bus Details</a>
+    </nav>
+    <a href="../html/login.html" class="logout-btn">🚪 Logout</a>
+  </aside>
+
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <h1>Live Bus Tracking</h1>
+    </header>
+
+    <section class="tracking-wrapper">
+
+      <div class="map-box">
+        <div class="map-placeholder">
+          <div class="route-line"></div>
+          <div class="bus-marker">🚌</div>
+          <div class="pin start">📍 Chandigarh</div>
+          <div class="pin end">🎯 Chitkara University</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2>Bus Information</h2>
+
+        <div class="info-row">
+          <span>Bus No:</span>
+          <strong>BUS-12</strong>
+        </div>
+        <div class="info-row">
+          <span>Route:</span>
+          <strong>Chandigarh → Chitkara University</strong>
+        </div>
+        <div class="info-row">
+          <span>Driver:</span>
+          <strong>Raj Kumar</strong>
+        </div>
+        <div class="info-row">
+          <span>Current Location:</span>
+          <strong>Rajpura</strong>
+        </div>
+        <div class="info-row">
+          <span>ETA:</span>
+          <strong>15 minutes</strong>
+        </div>
+        <div class="info-row">
+          <span>Status:</span>
+          <strong class="status on-route">On Route</strong>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>
