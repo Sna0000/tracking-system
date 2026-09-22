@@ -1,20 +1,18 @@
-// Get registration form
+
 const registerForm =
     document.getElementById("registerForm");
 
-// Get message box
 const message =
     document.getElementById("message");
 
 
-// When form is submitted
+
 registerForm.addEventListener("submit", function(event) {
 
-    // Stop page from refreshing
     event.preventDefault();
 
 
-    // Get values from form
+   
     const name =
         document.getElementById("name").value;
 
@@ -25,7 +23,7 @@ registerForm.addEventListener("submit", function(event) {
         document.getElementById("password").value;
 
 
-    // First check whether email already exists
+    
     fetch("http://localhost:3000/users")
 
         .then(function(response) {
@@ -36,7 +34,7 @@ registerForm.addEventListener("submit", function(event) {
 
         .then(function(users) {
 
-            // Check existing email
+           
             const existingUser = users.find(function(user) {
 
                 return user.email === email;
@@ -44,7 +42,7 @@ registerForm.addEventListener("submit", function(event) {
             });
 
 
-            // If email already exists
+           
             if (existingUser) {
 
                 message.textContent =
@@ -54,7 +52,7 @@ registerForm.addEventListener("submit", function(event) {
             }
 
 
-            // Create new user object
+            
             const newUser = {
 
                 name: name,
@@ -66,7 +64,7 @@ registerForm.addEventListener("submit", function(event) {
             };
 
 
-            // Send new user to JSON Server
+          
             return fetch("http://localhost:3000/users", {
 
                 method: "POST",
@@ -85,7 +83,7 @@ registerForm.addEventListener("submit", function(event) {
 
         .then(function(response) {
 
-            // If no response because email existed
+           
             if (!response) {
                 return;
             }
@@ -96,16 +94,16 @@ registerForm.addEventListener("submit", function(event) {
 
         .then(function(data) {
 
-            // If user was successfully added
+          
             if (data) {
 
                 message.textContent =
                     "Account created successfully!";
 
-                // Clear form
+               
                 registerForm.reset();
 
-                // Go to login after 1 second
+                
                 setTimeout(function() {
 
                     window.location.href =
